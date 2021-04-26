@@ -15,6 +15,7 @@
 		A9FCA4B52636DA6C00FDF425 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FCA4B32636DA6C00FDF425 /* LaunchScreen.storyboard */; };
 		A9FCA4C02636DA6D00FDF425 /* TruthOrDrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA4BF2636DA6D00FDF425 /* TruthOrDrinkTests.swift */; };
 		A9FCA4CB2636DA6D00FDF425 /* TruthOrDrinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA4CA2636DA6D00FDF425 /* TruthOrDrinkUITests.swift */; };
+		A9FCA4E22636E3E000FDF425 /* gameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA4E12636E3E000FDF425 /* gameRules.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A9FCA4C62636DA6D00FDF425 /* TruthOrDrinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TruthOrDrinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FCA4CA2636DA6D00FDF425 /* TruthOrDrinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruthOrDrinkUITests.swift; sourceTree = "<group>"; };
 		A9FCA4CC2636DA6D00FDF425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9FCA4E12636E3E000FDF425 /* gameRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameRules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				A9FCA4B12636DA6C00FDF425 /* Assets.xcassets */,
 				A9FCA4B32636DA6C00FDF425 /* LaunchScreen.storyboard */,
 				A9FCA4B62636DA6C00FDF425 /* Info.plist */,
+				A9FCA4E12636E3E000FDF425 /* gameRules.swift */,
 			);
 			path = TruthOrDrink;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				A9FCA4AD2636DA6A00FDF425 /* ViewController.swift in Sources */,
 				A9FCA4A92636DA6A00FDF425 /* AppDelegate.swift in Sources */,
 				A9FCA4AB2636DA6A00FDF425 /* SceneDelegate.swift in Sources */,
+				A9FCA4E22636E3E000FDF425 /* gameRules.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
