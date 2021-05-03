@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "wordart.png",
+      "filename" : "wordart (1).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "wordart (1)-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "wordart (1)-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

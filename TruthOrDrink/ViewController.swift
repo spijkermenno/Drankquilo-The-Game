@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet var closeButton: UIButton!
     
     var level = 2
+    var playing = false
+    var randomShot = false
     var showModeSelectionVar = false
     
     var gameRules = savedGameRules
@@ -46,6 +48,10 @@ class ViewController: UIViewController {
     
     func setGameRules() {
         gameRules = savedGameRules
+        
+        for question in StorageHelper().retrieveFromLocalStorage() {
+            gameRules.append(question)
+        }
         
         Analytics.logEvent("reset_gamerules", parameters: ["error": false])
     }
@@ -137,50 +143,83 @@ class ViewController: UIViewController {
         return drinkLiteral
     }
     
+    @IBAction func tapHandler(_ sender: Any) {
+        if playing {
+            clickNewText(playButton)
+        }
+    }
+    
     @IBAction func clickNewText(_ sender: UIButton) {
+        playing = true
+        let rand = Int.random(in: 1..<25)
+        
         if showModeSelectionVar {
             showModeSelection()
             showModeSelectionVar = false
         } else {
-            if gameRules.count > 0 {
-                let id = Int.random(in: 0..<gameRules.count)
-                sender.isHidden = false
-                sender.setTitle(gameRules[id], for: .normal)
-                gameRules.remove(at: id)
+            if rand == 1 && !randomShot {
+                sender.animateHidden(false)
+                sender.setTitle("Iedereen gooit een atje!", for: .normal)
                 
-                shotsCounterLabel.text = generateDrinks()
-                shotsCounterLabel.isHidden = false
+                shotsCounterLabel.animateHidden(false)
+                shotsCounterLabel.text = "GEPRANKT"
                 
-                pussyModeButton.isHidden = true
-                normalModeButton.isHidden = true
-                hardModeButton.isHidden = true
-                chooseModeLabel.isHidden = true
+                pussyModeButton.animateHidden(true)
+                normalModeButton.animateHidden(true)
+                hardModeButton.animateHidden(true)
+                chooseModeLabel.animateHidden(true)
                 
-                closeButton.isHidden = false
-                adview.isHidden = false
-                orLabel.isHidden = false
+                closeButton.animateHidden(false)
+                adview.animateHidden(false)
+                orLabel.animateHidden(true)
+                randomShot = true
             } else {
-                sender.setTitle("Klaar! Opnieuw beginnen? klik hier.", for: .normal)
-                shotsCounterLabel.isHidden = true
-                orLabel.isHidden = true
-                adview.isHidden = true
-                showModeSelectionVar = true
-                closeButton.isHidden = true
+                randomShot = false
+                if gameRules.count > 0 {
+                    let id = Int.random(in: 0..<gameRules.count)
+                    sender.animateHidden(false)
+                    sender.setTitle(gameRules[id], for: .normal)
+                    gameRules.remove(at: id)
+                    
+                    shotsCounterLabel.text = generateDrinks()
+                    shotsCounterLabel.animateHidden(false)
+                    
+                    pussyModeButton.animateHidden(true)
+                    normalModeButton.animateHidden(true)
+                    hardModeButton.animateHidden(true)
+                    chooseModeLabel.animateHidden(true)
+                    
+                    closeButton.animateHidden(false)
+                    adview.animateHidden(false)
+                    orLabel.animateHidden(false)
+                } else {
+                    sender.setTitle("Klaar! Opnieuw beginnen? klik hier.", for: .normal)
+                    shotsCounterLabel.animateHidden(true)
+                    orLabel.animateHidden(true)
+                    adview.animateHidden(true)
+                    showModeSelectionVar = true
+                    closeButton.animateHidden(true)
+                }
             }
         }
     }
+    @IBAction func scrollBackGesture(_ sender: Any) {
+        showModeSelection()
+    }
     
     func showModeSelection() {
-        playButton.isHidden = true
-        orLabel.isHidden = true
-        adview.isHidden = true
-        closeButton.isHidden = true
-        shotsCounterLabel.isHidden = true
+        playButton.animateHidden(true)
+        orLabel.animateHidden(true)
+        adview.animateHidden(true)
+        closeButton.animateHidden(true)
+        shotsCounterLabel.animateHidden(true)
         
-        pussyModeButton.isHidden = false
-        normalModeButton.isHidden = false
-        hardModeButton.isHidden = false
-        chooseModeLabel.isHidden = false
+        pussyModeButton.animateHidden(false)
+        normalModeButton.animateHidden(false)
+        hardModeButton.animateHidden(false)
+        chooseModeLabel.animateHidden(false)
+        
+        playing = false
         
         setGameRules()
     }
@@ -196,3 +235,17 @@ class ViewController: UIViewController {
     }
 }
 
+extension UIView {
+    func animateHidden(_ hidden: Bool) {
+            if self.isHidden && !hidden {
+                self.alpha = 0.0
+                self.isHidden = false
+            }
+            UIView.animate(withDuration: 0.25, animations: {
+                self.alpha = hidden ? 0.0 : 1.0
+            }) { (complete) in
+                self.isHidden = hidden
+            }
+        
+    }
+}

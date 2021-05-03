@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,18 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AANTAL SLOKKEN/SHOTS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lZ-mh-HQi">
-                                <rect key="frame" x="340.5" y="121" width="215" height="20.5"/>
+                                <rect key="frame" x="340.66666666666669" y="59.000000000000007" width="215.00000000000006" height="20.333333333333336"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of antwoord de volgende vraag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-7W-TCD">
-                                <rect key="frame" x="330" y="148.5" width="236.5" height="21"/>
+                                <rect key="frame" x="329.66666666666669" y="86.666666666666671" width="237.00000000000006" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0KS-WI-bRb">
-                                <rect key="frame" x="76" y="183" width="744" height="48"/>
+                                <rect key="frame" x="76" y="121" width="744" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <state key="normal" title="Klik hier!">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6m-N0-yOH" customClass="GADBannerView">
-                                <rect key="frame" x="76" y="311" width="744" height="50"/>
+                                <rect key="frame" x="288" y="187" width="320" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="6UR-ky-icQ"/>
@@ -46,12 +46,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRF-wg-BLR">
-                                <rect key="frame" x="418" y="239" width="60" height="60"/>
+                                <rect key="frame" x="418" y="115" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="5tY-CC-Ppi"/>
                                     <constraint firstAttribute="width" constant="60" id="TwY-f1-lLU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="🍻">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
@@ -60,12 +60,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uq-Wv-OzK">
-                                <rect key="frame" x="514" y="239" width="60" height="60"/>
+                                <rect key="frame" x="622" y="115" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="T9h-ZR-huS"/>
                                     <constraint firstAttribute="width" constant="60" id="o4V-An-2uY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="🌶">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
@@ -74,17 +74,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kies een mode!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUa-Sg-eED">
-                                <rect key="frame" x="367" y="130" width="162.5" height="26.5"/>
+                                <rect key="frame" x="366.66666666666669" y="67.666666666666671" width="163.00000000000006" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyJ-fF-jnb">
-                                <rect key="frame" x="322" y="239" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyJ-fF-jnb">
+                                <rect key="frame" x="214" y="115" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="ami-Ft-Ubv"/>
                                     <constraint firstAttribute="height" constant="60" id="k1f-P1-QN8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" name=".AppleColorEmojiUI" family=".Apple Color Emoji UI" pointSize="45"/>
                                 <state key="normal" title="🐱">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
@@ -102,31 +102,33 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="A6m-N0-yOH" firstAttribute="top" secondItem="lRF-wg-BLR" secondAttribute="bottom" constant="12" id="8AH-Vp-aY6"/>
                             <constraint firstItem="UUa-Sg-eED" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-64" id="AM1-Mo-pPp"/>
                             <constraint firstItem="7uq-Wv-OzK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EDx-i1-TTv"/>
                             <constraint firstItem="U7p-7W-TCD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-48" id="KGW-7H-ogh"/>
-                            <constraint firstItem="7uq-Wv-OzK" firstAttribute="leading" secondItem="lRF-wg-BLR" secondAttribute="trailing" constant="36" id="OL3-ph-EXE"/>
                             <constraint firstItem="U7p-7W-TCD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OtI-nv-5dY"/>
                             <constraint firstItem="A6m-N0-yOH" firstAttribute="top" secondItem="XyJ-fF-jnb" secondAttribute="bottom" constant="12" id="Rup-D7-fpb"/>
                             <constraint firstItem="XyJ-fF-jnb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S11-if-Jio"/>
-                            <constraint firstItem="lRF-wg-BLR" firstAttribute="leading" secondItem="XyJ-fF-jnb" secondAttribute="trailing" constant="36" id="S6q-6C-Kr9"/>
+                            <constraint firstItem="7uq-Wv-OzK" firstAttribute="leading" secondItem="lRF-wg-BLR" secondAttribute="trailing" constant="144" id="SVS-8a-Boe"/>
                             <constraint firstItem="UUa-Sg-eED" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VB3-3Y-t77"/>
                             <constraint firstItem="lRF-wg-BLR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vh2-A6-Y5d"/>
                             <constraint firstItem="A6m-N0-yOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XTE-cP-zb0"/>
                             <constraint firstItem="0KS-WI-bRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="aY7-IY-AkZ"/>
                             <constraint firstItem="A6m-N0-yOH" firstAttribute="top" secondItem="7uq-Wv-OzK" secondAttribute="bottom" constant="12" id="atl-K5-UtH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0KS-WI-bRb" secondAttribute="trailing" constant="32" id="blC-IC-ocv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A6m-N0-yOH" secondAttribute="bottom" constant="32" id="fEf-Qg-2bN"/>
                             <constraint firstItem="0KS-WI-bRb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g4y-N1-i01"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A6m-N0-yOH" secondAttribute="trailing" constant="32" id="i72-24-QtE"/>
+                            <constraint firstItem="lRF-wg-BLR" firstAttribute="leading" secondItem="XyJ-fF-jnb" secondAttribute="trailing" constant="144" id="hqY-3X-vEE"/>
                             <constraint firstItem="7lZ-mh-HQi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="miw-JO-2wV"/>
                             <constraint firstItem="7lZ-mh-HQi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-76" id="reD-Vf-d8w"/>
                             <constraint firstItem="lRF-wg-BLR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tf5-cZ-UEX"/>
-                            <constraint firstItem="A6m-N0-yOH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="vN3-Cv-0S3"/>
                             <constraint firstItem="0KS-WI-bRb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xbv-co-ICD"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="d8z-yJ-iaD" appends="YES" id="ko5-ca-9Jd"/>
+                            <outletCollection property="gestureRecognizers" destination="H05-G5-L2k" appends="YES" id="OKT-zb-cta"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="CloseButton" destination="aAH-GE-XSJ" id="SnU-UE-nI9"/>
@@ -142,6 +144,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="d8z-yJ-iaD">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="scrollBackGesture:" destination="BYZ-38-t0r" id="HNZ-fH-xZb"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <tapGestureRecognizer id="H05-G5-L2k">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="4Jv-lc-QI2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-333.48214285714283" y="-39.130434782608695"/>
         </scene>

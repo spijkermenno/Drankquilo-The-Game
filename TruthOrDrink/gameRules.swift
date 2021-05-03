@@ -24,4 +24,11 @@ var savedGameRules: Array = [
     "Wat is het vreemdste wat je aantrekkelijk vindt aan een persoon?",
     "Waar heb je het meest spijt van?",
     "Wie uit de groep vind je het lelijkst?",
+    "Heb je wel eens iets gestolen? zo ja wat?",
+    "Hoe ziet jouw ideale date eruit?",
+    "Wat is je grootste afknapper bij het andere geslacht?",
+    "Heb je ooit iemand opgelicht?",
+    "Heb je wel eens een SOA gehad?",
+    "Wat is het meest gênante dat je ooit hebt gedaan?",
+    "Als je vanaf nu voor de rest van de avond slechts 3 woorden mocht gebruiken - welke zou dat dan zijn?"
 ]
