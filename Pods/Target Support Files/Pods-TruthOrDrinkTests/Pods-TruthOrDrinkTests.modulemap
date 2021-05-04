@@ -1,0 +1,6 @@
+framework module Pods_TruthOrDrinkTests {
+  umbrella header "Pods-TruthOrDrinkTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

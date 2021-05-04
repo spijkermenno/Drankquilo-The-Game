@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMobileAds
 import FirebaseAnalytics
+import StoreKit
 
 class ViewController: UIViewController {
     
@@ -26,12 +27,27 @@ class ViewController: UIViewController {
     var playing = false
     var randomShot = false
     var showModeSelectionVar = false
+    var removeAdsProduct: SKProduct!
     
     var gameRules = savedGameRules
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if StorageHelper().retrieveUUID() == "" {
+            StorageHelper().setUUID(uuid: NSUUID().uuidString)
+        }
+    
+        inAppPurchaseHelper.shared.getProducts {(result) in
+            switch result {
+                case .success(let products):
+                    print(products)
+                    self.removeAdsProduct = products.first
+                case .failure(let error):
+                    print(error)
+            }
+        }
+                
         getRandomColor()
         Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(getRandomColor), userInfo: nil, repeats: true)
         
@@ -44,6 +60,24 @@ class ViewController: UIViewController {
         adview.adUnitID = "ca-app-pub-4928043878967484/9103848063"
         adview.rootViewController = self
         adview.load(GADRequest())
+        
+        if removeAdsProduct != nil {
+            showAlert(for: removeAdsProduct)
+        }
+    }
+    
+    func showAlert(for product: SKProduct) {
+        guard let price = inAppPurchaseHelper.shared.getPriceFormatted(for: product) else { return }
+        let alertController = UIAlertController(title: product.localizedTitle,
+                                                message: product.localizedDescription,
+                                                preferredStyle: .alert)
+     
+        alertController.addAction(UIAlertAction(title: "Buy now for \(price)", style: .default, handler: { (_) in
+            // TODO: Initiate Purchase!
+        }))
+     
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func setGameRules() {
@@ -151,13 +185,17 @@ class ViewController: UIViewController {
     
     @IBAction func clickNewText(_ sender: UIButton) {
         playing = true
-        let rand = Int.random(in: 1..<25)
-        
+        var rand: Int!
+        if level == 3 {
+            rand = Int.random(in: 1..<25)
+        } else {
+            rand = Int.random(in: 1..<50)
+        }
         if showModeSelectionVar {
             showModeSelection()
             showModeSelectionVar = false
         } else {
-            if rand == 1 && !randomShot {
+            if rand == 1 && !randomShot && level > 1 {
                 sender.animateHidden(false)
                 sender.setTitle("Iedereen gooit een atje!", for: .normal)
                 
@@ -229,7 +267,7 @@ class ViewController: UIViewController {
             let hue = CGFloat(arc4random_uniform(361)) / 360.0
                         
             UIView.animateKeyframes(withDuration: 5, delay: 0, options: [.allowUserInteraction], animations: {
-                self.view.backgroundColor = UIColor(hue: hue, saturation: 0.66, brightness: 1, alpha: 0.9)
+                self.view.backgroundColor = UIColor(hue: hue, saturation: 0.75, brightness: 1, alpha: 1)
             }, completion: nil)
         }
     }

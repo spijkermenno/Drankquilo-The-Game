@@ -23,4 +23,17 @@ class StorageHelper {
         }
         return []
     }
+    
+    func retrieveUUID() -> String {
+        let a = defaults.string(forKey: "uuid")
+        
+        if a == nil {
+            return ""
+        }
+        return defaults.string(forKey: "uuid")!
+    }
+    
+    func setUUID(uuid: String) {
+        defaults.setValue(uuid, forKey: "uuid")
+    }
 }
