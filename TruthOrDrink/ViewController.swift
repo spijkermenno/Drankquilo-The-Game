@@ -37,6 +37,8 @@ class ViewController: UIViewController {
         if StorageHelper().retrieveUUID() == "" {
             StorageHelper().setUUID(uuid: NSUUID().uuidString)
         }
+        
+        Analytics.setUserID(StorageHelper().retrieveUUID())
     
         inAppPurchaseHelper.shared.getProducts {(result) in
             switch result {
@@ -59,7 +61,7 @@ class ViewController: UIViewController {
                 
         adview.adUnitID = "ca-app-pub-4928043878967484/9103848063"
         adview.rootViewController = self
-        adview.load(GADRequest())
+        //adview.load(GADRequest())
         
         if removeAdsProduct != nil {
             showAlert(for: removeAdsProduct)
@@ -91,6 +93,7 @@ class ViewController: UIViewController {
     }
     @IBAction func returnButtonTap(_ sender: UIButton) {
         showModeSelection()
+        Analytics.logEvent("return_to_selection", parameters: ["error": false])
     }
     
     @IBAction func pussyModeButtonTap(_ sender: UIButton) {
@@ -202,6 +205,8 @@ class ViewController: UIViewController {
                 shotsCounterLabel.animateHidden(false)
                 shotsCounterLabel.text = "GEPRANKT"
                 
+                Analytics.logEvent("pranked", parameters: ["type": "atje"])
+                
                 pussyModeButton.animateHidden(true)
                 normalModeButton.animateHidden(true)
                 hardModeButton.animateHidden(true)
@@ -232,6 +237,7 @@ class ViewController: UIViewController {
                     orLabel.animateHidden(false)
                 } else {
                     sender.setTitle("Klaar! Opnieuw beginnen? klik hier.", for: .normal)
+                    Analytics.logEvent("finished_game", parameters: ["error": false])
                     shotsCounterLabel.animateHidden(true)
                     orLabel.animateHidden(true)
                     adview.animateHidden(true)
@@ -243,6 +249,8 @@ class ViewController: UIViewController {
     }
     @IBAction func scrollBackGesture(_ sender: Any) {
         showModeSelection()
+        Analytics.logEvent("scroll_back", parameters: ["error": false])
+
     }
     
     func showModeSelection() {
