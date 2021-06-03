@@ -30,5 +30,5 @@ var savedGameRules: Array = [
     "Heb je ooit iemand opgelicht?",
     "Heb je wel eens een SOA gehad?",
     "Wat is het meest gênante dat je ooit hebt gedaan?",
-    "Als je vanaf nu voor de rest van de avond slechts 3 woorden mocht gebruiken - welke zou dat dan zijn?"
+    "Je mag de rest van de avond 3 woorden gebruiken - welke zouden dat dan zijn?"
 ]

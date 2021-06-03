@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NetworkRequestHelper().request()
+        
         if StorageHelper().retrieveUUID() == "" {
             StorageHelper().setUUID(uuid: NSUUID().uuidString)
         }
@@ -83,11 +85,23 @@ class ViewController: UIViewController {
     }
     
     func setGameRules() {
-        gameRules = savedGameRules
+        gameRules.removeAll()
+        
+        for question in savedGameRules {
+            gameRules.append(question)
+        }
+        
+        print(StorageHelper().retrieveFromLocalStorage())
+        print(savedGameRules)
+        print(gameRules)
         
         for question in StorageHelper().retrieveFromLocalStorage() {
             gameRules.append(question)
         }
+        
+        print("--------------------------------------")
+        print(gameRules)
+        print("--------------------------------------")
         
         Analytics.logEvent("reset_gamerules", parameters: ["error": false])
     }
@@ -98,18 +112,21 @@ class ViewController: UIViewController {
     
     @IBAction func pussyModeButtonTap(_ sender: UIButton) {
         level = 1
+        setGameRules()
         clickNewText(playButton)
         Analytics.logEvent("gamemode_select", parameters: ["type": "pussymode"])
     }
     
     @IBAction func normalModeButtonTap(_ sender: UIButton) {
         level = 2
+        setGameRules()
         clickNewText(playButton)
         Analytics.logEvent("gamemode_select", parameters: ["type": "normalmode"])
     }
     
     @IBAction func hardModeButtonTap(_ sender: UIButton) {
         level = 3
+        setGameRules()
         clickNewText(playButton)
         Analytics.logEvent("gamemode_select", parameters: ["type": "diehardmode"])
     }
