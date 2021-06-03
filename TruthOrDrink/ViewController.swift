@@ -40,14 +40,18 @@ class ViewController: UIViewController {
             StorageHelper().setUUID(uuid: NSUUID().uuidString)
         }
         
-        Analytics.setUserID(StorageHelper().retrieveUUID())
+        //Analytics.setUserID(StorageHelper().retrieveUUID())
     
+        print("getting products in controller")
         inAppPurchaseHelper.shared.getProducts {(result) in
+            print(result)
             switch result {
                 case .success(let products):
+                    print("==============")
                     print(products)
                     self.removeAdsProduct = products.first
                 case .failure(let error):
+                    print("==============")
                     print(error)
             }
         }
@@ -61,8 +65,8 @@ class ViewController: UIViewController {
         
         playButton.contentHorizontalAlignment = .center
                 
-        adview.adUnitID = "ca-app-pub-4928043878967484/9103848063"
-        adview.rootViewController = self
+        //adview.adUnitID = "ca-app-pub-4928043878967484/9103848063"
+        //adview.rootViewController = self
         //adview.load(GADRequest())
         
         if removeAdsProduct != nil {

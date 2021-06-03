@@ -9,27 +9,15 @@ import Foundation
 import StoreKit
 
 class inAppPurchaseHelper: NSObject, SKProductsRequestDelegate {
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        // Get the available products contained in the response.
-            let products = response.products
-         
-            // Check if there are any products available.
-            if products.count > 0 {
-                // Call the following handler passing the received products.
-                onReceiveProductsHandler?(.success(products))
-            } else {
-                // No products were found.
-                onReceiveProductsHandler?(.failure(.noProductsFound))
-            }
-    }
-    
     static let shared = inAppPurchaseHelper()
-    
     var onReceiveProductsHandler: ((Result<[SKProduct], inAppPurchaseHelperError>) -> Void)?
+    var request: SKProductsRequest!
     
     private override init() {
         super.init()
     }
+
+    
     
     func getPriceFormatted(for product: SKProduct) -> String? {
         let formatter = NumberFormatter()
@@ -39,6 +27,8 @@ class inAppPurchaseHelper: NSObject, SKProductsRequestDelegate {
     }
     
     func getProducts(withHandler productsReceiveHandler: @escaping (_ result: Result<[SKProduct], inAppPurchaseHelperError>) -> Void) {
+        
+        print("Get products")
         // Keep the handler (closure) that will be called when requesting for
         // products on the App Store is finished.
         onReceiveProductsHandler = productsReceiveHandler
@@ -48,15 +38,20 @@ class inAppPurchaseHelper: NSObject, SKProductsRequestDelegate {
             productsReceiveHandler(.failure(.noProductIDsFound))
             return
         }
-             
+        
+        print("No error yet")
+        print(productIDs)
+        
         // Initialize a product request.
-        let request = SKProductsRequest(productIdentifiers: Set(productIDs))
-     
+        let productIdentifiers = Set(productIDs)
+        request = SKProductsRequest(productIdentifiers: productIdentifiers)
+        
         // Set self as the its delegate.
         request.delegate = self
      
         // Make the request.
         request.start()
+        
     }
     
     fileprivate func getProductIDs() -> [String]? {
@@ -78,6 +73,25 @@ class inAppPurchaseHelper: NSObject, SKProductsRequestDelegate {
         }
     }
     
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+
+        print("productsRequest")
+        // Get the available products contained in the response.
+        let products = response.products
+        
+        print("========")
+        print(products)
+         
+            // Check if there are any products available.
+            if products.count > 0 {
+                // Call the following handler passing the received products.
+                onReceiveProductsHandler?(.success(products))
+            } else {
+                // No products were found.
+                onReceiveProductsHandler?(.failure(.noProductsFound))
+            }
+    }
+    
     enum inAppPurchaseHelperError: Error {
         case noProductIDsFound
         case noProductsFound
@@ -85,6 +99,7 @@ class inAppPurchaseHelper: NSObject, SKProductsRequestDelegate {
         case productRequestFailed
     }
 }
+
 
 extension inAppPurchaseHelper.inAppPurchaseHelperError: LocalizedError {
     var errorDescription: String? {
