@@ -17,11 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet var orLabel: UILabel!
     @IBOutlet var chooseModeLabel: UILabel!
     @IBOutlet var adview: GADBannerView!
+    @IBOutlet var rulesLabel: UILabel!
     
     @IBOutlet var pussyModeButton: UIButton!
     @IBOutlet var normalModeButton: UIButton!
     @IBOutlet var hardModeButton: UIButton!
     @IBOutlet var closeButton: UIButton!
+    @IBOutlet var rulesButton: UIButton!
+    @IBOutlet var removeAdsButton: UIButton!
     
     var level = 2
     var playing = false
@@ -44,15 +47,18 @@ class ViewController: UIViewController {
     
         print("getting products in controller")
         inAppPurchaseHelper.shared.getProducts {(result) in
+            print("get...")
             print(result)
             switch result {
                 case .success(let products):
-                    print("==============")
+                    print("============== success")
                     print(products)
-                    self.removeAdsProduct = products.first
+                    //self.removeAdsProduct = products.first
+                break
                 case .failure(let error):
-                    print("==============")
+                    print("============== error")
                     print(error)
+                break;
             }
         }
                 
@@ -65,13 +71,9 @@ class ViewController: UIViewController {
         
         playButton.contentHorizontalAlignment = .center
                 
-        //adview.adUnitID = "ca-app-pub-4928043878967484/9103848063"
-        //adview.rootViewController = self
-        //adview.load(GADRequest())
-        
-        if removeAdsProduct != nil {
-            showAlert(for: removeAdsProduct)
-        }
+        adview.adUnitID = "ca-app-pub-4928043878967484/9103848063"
+        adview.rootViewController = self
+        adview.load(GADRequest())
     }
     
     func showAlert(for product: SKProduct) {
@@ -82,6 +84,7 @@ class ViewController: UIViewController {
      
         alertController.addAction(UIAlertAction(title: "Buy now for \(price)", style: .default, handler: { (_) in
             // TODO: Initiate Purchase!
+            
         }))
      
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -109,6 +112,13 @@ class ViewController: UIViewController {
         
         Analytics.logEvent("reset_gamerules", parameters: ["error": false])
     }
+    
+    @IBAction func rulesButtonTap(_ sender: UIButton) {
+        if let url = URL(string: "https://ondergrondseontwikkeling.nl/dranquilo/regels") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     @IBAction func returnButtonTap(_ sender: UIButton) {
         showModeSelection()
         Analytics.logEvent("return_to_selection", parameters: ["error": false])
@@ -135,6 +145,10 @@ class ViewController: UIViewController {
         Analytics.logEvent("gamemode_select", parameters: ["type": "diehardmode"])
     }
     
+    @IBAction func removeAdsTap(_ sender: Any) {
+        showAlert(for: removeAdsProduct)
+    }
+    
     func generateDrinks() -> String {
         var drinkLiteral: String!
         var amount: Int!
@@ -147,11 +161,11 @@ class ViewController: UIViewController {
             if type == 1 {
                 // shots
                 amount = 1
-                drinkLiteral = "1 shot"
+                drinkLiteral = "1 mega-punt"
             } else if type == 2 {
                 // sips
                 amount = Int.random(in: 1..<4)
-                drinkLiteral = "\(String(describing: amount!)) slokken"
+                drinkLiteral = "\(String(describing: amount!)) punten"
             }
         
         case 3: // DieHard Mode
@@ -161,14 +175,14 @@ class ViewController: UIViewController {
                 // shots
                 amount = Int.random(in: 2..<5)
                 if amount == 1 {
-                    drinkLiteral = "\(String(describing: amount!)) shot"
+                    drinkLiteral = "\(String(describing: amount!)) mega-punt"
                 } else {
-                    drinkLiteral = "\(String(describing: amount!)) shots"
+                    drinkLiteral = "\(String(describing: amount!)) mega-punten"
                 }
             } else if type == 2 {
                 // sips
                 amount = Int.random(in: 4..<11)
-                drinkLiteral = "\(String(describing: amount!)) slokken"
+                drinkLiteral = "\(String(describing: amount!)) punten"
             }
         
         default: // Normal mode
@@ -178,14 +192,14 @@ class ViewController: UIViewController {
                 // shots
                 amount = Int.random(in: 1..<3)
                 if amount == 1 {
-                    drinkLiteral = "\(String(describing: amount!)) shot"
+                    drinkLiteral = "\(String(describing: amount!)) mega-punt"
                 } else {
-                    drinkLiteral = "\(String(describing: amount!)) shots"
+                    drinkLiteral = "\(String(describing: amount!)) mega-punten"
                 }
             } else if type == 2 {
                 // sips
                 amount = Int.random(in: 2..<7)
-                drinkLiteral = "\(String(describing: amount!)) slokken"
+                drinkLiteral = "\(String(describing: amount!)) punten"
             }
         }
         
@@ -221,7 +235,7 @@ class ViewController: UIViewController {
         } else {
             if rand == 1 && !randomShot && level > 1 {
                 sender.animateHidden(false)
-                sender.setTitle("Iedereen gooit een atje!", for: .normal)
+                sender.setTitle("Iedereen neemt het maximale aantal punten!", for: .normal)
                 
                 shotsCounterLabel.animateHidden(false)
                 shotsCounterLabel.text = "GEPRANKT"
@@ -230,12 +244,18 @@ class ViewController: UIViewController {
                 
                 pussyModeButton.animateHidden(true)
                 normalModeButton.animateHidden(true)
+                rulesButton.animateHidden(true)
                 hardModeButton.animateHidden(true)
                 chooseModeLabel.animateHidden(true)
-                
+                rulesLabel.animateHidden(true)
                 closeButton.animateHidden(false)
                 adview.animateHidden(false)
                 orLabel.animateHidden(true)
+                
+                if self.removeAdsProduct != nil {
+                    removeAdsButton.animateHidden(false)
+                }
+                
                 randomShot = true
             } else {
                 randomShot = false
@@ -253,9 +273,16 @@ class ViewController: UIViewController {
                     hardModeButton.animateHidden(true)
                     chooseModeLabel.animateHidden(true)
                     
+                    rulesButton.animateHidden(true)
+                    rulesLabel.animateHidden(true)
+                    
                     closeButton.animateHidden(false)
                     adview.animateHidden(false)
                     orLabel.animateHidden(false)
+                    
+                    if self.removeAdsProduct != nil {
+                        removeAdsButton.animateHidden(false)
+                    }
                 } else {
                     sender.setTitle("Klaar! Opnieuw beginnen? klik hier.", for: .normal)
                     Analytics.logEvent("finished_game", parameters: ["error": false])
@@ -264,6 +291,8 @@ class ViewController: UIViewController {
                     adview.animateHidden(true)
                     showModeSelectionVar = true
                     closeButton.animateHidden(true)
+                    rulesButton.animateHidden(true)
+                    rulesLabel.animateHidden(true)
                 }
             }
         }

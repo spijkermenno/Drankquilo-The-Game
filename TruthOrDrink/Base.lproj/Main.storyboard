@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,19 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AANTAL SLOKKEN/SHOTS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lZ-mh-HQi">
-                                <rect key="frame" x="340.66666666666669" y="59.000000000000007" width="215.00000000000006" height="20.333333333333336"/>
+                                <rect key="frame" x="340.66666666666669" y="120.99999999999999" width="215.00000000000006" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of antwoord de volgende vraag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-7W-TCD">
-                                <rect key="frame" x="329.66666666666669" y="86.666666666666671" width="237.00000000000006" height="21"/>
+                                <rect key="frame" x="329.66666666666669" y="148.66666666666666" width="237.00000000000006" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0KS-WI-bRb">
-                                <rect key="frame" x="76" y="121" width="744" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <rect key="frame" x="76" y="179.66666666666666" width="744" height="126.33333333333334"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
                                 <state key="normal" title="Klik hier!">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
@@ -37,16 +38,17 @@
                                     <action selector="clickNewText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbC-Kk-Kog"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6m-N0-yOH" customClass="GADBannerView">
-                                <rect key="frame" x="288" y="187" width="320" height="50"/>
+                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6m-N0-yOH" customClass="GADBannerView">
+                                <rect key="frame" x="288" y="311" width="320" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="6UR-ky-icQ"/>
                                     <constraint firstAttribute="height" constant="50" id="8jw-my-MDd"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRF-wg-BLR">
-                                <rect key="frame" x="418" y="115" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Gezellig mode" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRF-wg-BLR">
+                                <rect key="frame" x="418" y="177" width="60" height="60"/>
+                                <accessibility key="accessibilityConfiguration" label="Gezellig mode"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="5tY-CC-Ppi"/>
                                     <constraint firstAttribute="width" constant="60" id="TwY-f1-lLU"/>
@@ -59,8 +61,9 @@
                                     <action selector="normalModeButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCn-Nk-P0Y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uq-Wv-OzK">
-                                <rect key="frame" x="622" y="115" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Spicy mode" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uq-Wv-OzK">
+                                <rect key="frame" x="622" y="239" width="60" height="60"/>
+                                <accessibility key="accessibilityConfiguration" label="Spicy mode"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="T9h-ZR-huS"/>
                                     <constraint firstAttribute="width" constant="60" id="o4V-An-2uY"/>
@@ -74,12 +77,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kies een mode!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUa-Sg-eED">
-                                <rect key="frame" x="366.66666666666669" y="67.666666666666671" width="163.00000000000006" height="27"/>
+                                <rect key="frame" x="366.66666666666669" y="129.66666666666666" width="163.00000000000006" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyJ-fF-jnb">
-                                <rect key="frame" x="214" y="115" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Pussy mode" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyJ-fF-jnb">
+                                <rect key="frame" x="214" y="239" width="60" height="60"/>
+                                <accessibility key="accessibilityConfiguration" label="Pussy mode"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="ami-Ft-Ubv"/>
                                     <constraint firstAttribute="height" constant="60" id="k1f-P1-QN8"/>
@@ -99,14 +103,49 @@
                                     <action selector="returnButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Twn-gk-oYk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="rulesText" text="Vermijd het verdienen van punten! Verzin je eigen regels of bekijk de standaard regels op de site!" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-4g-ufJ">
+                                <rect key="frame" x="248" y="236.66666666666663" width="400" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="SnX-VM-CjO"/>
+                                    <constraint firstAttribute="height" constant="100" id="qGF-lK-9Gf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyi-uM-hTg">
+                                <rect key="frame" x="431" y="306.66666666666669" width="34" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="📜"/>
+                                <connections>
+                                    <action selector="rulesButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DuK-Tu-UAi"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJs-em-cLF">
+                                <rect key="frame" x="352" y="366" width="192" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Advertenties verwijderen?">
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="removeAdsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDC-hI-Hhl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="A6m-N0-yOH" firstAttribute="top" secondItem="lRF-wg-BLR" secondAttribute="bottom" constant="12" id="8AH-Vp-aY6"/>
+                            <constraint firstItem="nJs-em-cLF" firstAttribute="top" secondItem="A6m-N0-yOH" secondAttribute="bottom" constant="5" id="1Lf-ab-cjG"/>
+                            <constraint firstItem="0KS-WI-bRb" firstAttribute="top" secondItem="U7p-7W-TCD" secondAttribute="bottom" constant="10" id="7Us-dh-UEC"/>
+                            <constraint firstItem="A6m-N0-yOH" firstAttribute="top" secondItem="0KS-WI-bRb" secondAttribute="bottom" constant="5" id="8AH-Vp-aY6"/>
+                            <constraint firstItem="kyi-uM-hTg" firstAttribute="top" secondItem="UUa-Sg-eED" secondAttribute="bottom" constant="150" id="8n3-Xh-8c3"/>
+                            <constraint firstItem="nJs-em-cLF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9De-YV-fuW"/>
                             <constraint firstItem="UUa-Sg-eED" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-64" id="AM1-Mo-pPp"/>
+                            <constraint firstItem="kyi-uM-hTg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CYo-oX-K4v"/>
                             <constraint firstItem="7uq-Wv-OzK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EDx-i1-TTv"/>
+                            <constraint firstItem="m5x-4g-ufJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EgW-ns-G5v"/>
                             <constraint firstItem="U7p-7W-TCD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-48" id="KGW-7H-ogh"/>
                             <constraint firstItem="U7p-7W-TCD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OtI-nv-5dY"/>
                             <constraint firstItem="A6m-N0-yOH" firstAttribute="top" secondItem="XyJ-fF-jnb" secondAttribute="bottom" constant="12" id="Rup-D7-fpb"/>
@@ -117,13 +156,13 @@
                             <constraint firstItem="A6m-N0-yOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XTE-cP-zb0"/>
                             <constraint firstItem="0KS-WI-bRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="aY7-IY-AkZ"/>
                             <constraint firstItem="A6m-N0-yOH" firstAttribute="top" secondItem="7uq-Wv-OzK" secondAttribute="bottom" constant="12" id="atl-K5-UtH"/>
+                            <constraint firstItem="m5x-4g-ufJ" firstAttribute="top" secondItem="UUa-Sg-eED" secondAttribute="bottom" constant="80" id="cv9-Tn-gm7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A6m-N0-yOH" secondAttribute="bottom" constant="32" id="fEf-Qg-2bN"/>
                             <constraint firstItem="0KS-WI-bRb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g4y-N1-i01"/>
                             <constraint firstItem="lRF-wg-BLR" firstAttribute="leading" secondItem="XyJ-fF-jnb" secondAttribute="trailing" constant="144" id="hqY-3X-vEE"/>
                             <constraint firstItem="7lZ-mh-HQi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="miw-JO-2wV"/>
                             <constraint firstItem="7lZ-mh-HQi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-76" id="reD-Vf-d8w"/>
                             <constraint firstItem="lRF-wg-BLR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tf5-cZ-UEX"/>
-                            <constraint firstItem="0KS-WI-bRb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xbv-co-ICD"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="d8z-yJ-iaD" appends="YES" id="ko5-ca-9Jd"/>
@@ -132,7 +171,7 @@
                     </view>
                     <connections>
                         <outlet property="CloseButton" destination="aAH-GE-XSJ" id="SnU-UE-nI9"/>
-                        <outlet property="adview" destination="A6m-N0-yOH" id="s9l-bZ-Wr8"/>
+                        <outlet property="adview" destination="A6m-N0-yOH" id="yqR-f4-1qt"/>
                         <outlet property="chooseModeLabel" destination="UUa-Sg-eED" id="2vS-On-aSt"/>
                         <outlet property="closeButton" destination="aAH-GE-XSJ" id="TpR-zS-7Pk"/>
                         <outlet property="hardModeButton" destination="7uq-Wv-OzK" id="nwR-w6-wcl"/>
@@ -140,6 +179,9 @@
                         <outlet property="orLabel" destination="U7p-7W-TCD" id="Qrd-Tl-peK"/>
                         <outlet property="playButton" destination="0KS-WI-bRb" id="An3-qp-nja"/>
                         <outlet property="pussyModeButton" destination="XyJ-fF-jnb" id="XG4-CV-gKe"/>
+                        <outlet property="removeAdsButton" destination="nJs-em-cLF" id="NG9-7m-RvI"/>
+                        <outlet property="rulesButton" destination="kyi-uM-hTg" id="PVZ-o6-mpP"/>
+                        <outlet property="rulesLabel" destination="m5x-4g-ufJ" id="Ip8-Po-Fzh"/>
                         <outlet property="shotsCounterLabel" destination="7lZ-mh-HQi" id="VgI-yQ-cuI"/>
                     </connections>
                 </viewController>
