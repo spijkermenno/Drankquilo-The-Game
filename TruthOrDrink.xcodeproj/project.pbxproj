@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4A619E96D87F422949EC31A0 /* Pods_TruthOrDrinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD8D0DF09F809A1D986B186 /* Pods_TruthOrDrinkTests.framework */; };
+		A913252F280B51FF00988584 /* PurchasableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913252E280B51FF00988584 /* PurchasableData.swift */; };
+		A9132531280B522F00988584 /* SettingsManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9132530280B522F00988584 /* SettingsManageable.swift */; };
+		A9132534280B527C00988584 /* PurchasableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9132533280B527C00988584 /* PurchasableViewModel.swift */; };
+		A9132536280B52DC00988584 /* StorageIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9132535280B52DC00988584 /* StorageIdentifier.swift */; };
+		A9132538280B5AE500988584 /* AnalyticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9132537280B5AE500988584 /* AnalyticsHelper.swift */; };
+		A913253A280B5C4900988584 /* commandObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9132539280B5C4900988584 /* commandObject.swift */; };
+		A913253C280B5C9E00988584 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913253B280B5C9E00988584 /* IAPHelper.swift */; };
+		A913253E280EA43300988584 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A913253D280EA43300988584 /* StoreKit.framework */; };
 		A9168C6626403F0E000B6C22 /* networkRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9168C6526403F0E000B6C22 /* networkRequestHelper.swift */; };
 		A9168C6826404098000B6C22 /* questionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9168C6726404098000B6C22 /* questionObject.swift */; };
 		A9168C6A2640414D000B6C22 /* storageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9168C692640414D000B6C22 /* storageHelper.swift */; };
 		A9168C6C2641356C000B6C22 /* inAppPurchaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9168C6B2641356C000B6C22 /* inAppPurchaseHelper.swift */; };
-		A9168C6E2641371C000B6C22 /* purchasableProducts.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9168C6D2641371C000B6C22 /* purchasableProducts.plist */; };
+		A9168C6E2641371C000B6C22 /* IAP_ProductIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9168C6D2641371C000B6C22 /* IAP_ProductIDs.plist */; };
 		A9492DD5263AE09700F08F87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9492DD4263AE09700F08F87 /* GoogleService-Info.plist */; };
 		A9FCA4A92636DA6A00FDF425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA4A82636DA6A00FDF425 /* AppDelegate.swift */; };
 		A9FCA4AB2636DA6A00FDF425 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FCA4AA2636DA6A00FDF425 /* SceneDelegate.swift */; };
@@ -50,11 +58,20 @@
 		41BEDAC7CF9AEA3FFA36E968 /* Pods_TruthOrDrink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TruthOrDrink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4576B3A2310E0CD9462F0A58 /* Pods-TruthOrDrinkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TruthOrDrinkTests.release.xcconfig"; path = "Target Support Files/Pods-TruthOrDrinkTests/Pods-TruthOrDrinkTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A3D9EFB8267F6D5D85BCE96 /* Pods_TruthOrDrink_TruthOrDrinkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TruthOrDrink_TruthOrDrinkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A913252E280B51FF00988584 /* PurchasableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasableData.swift; sourceTree = "<group>"; };
+		A9132530280B522F00988584 /* SettingsManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManageable.swift; sourceTree = "<group>"; };
+		A9132533280B527C00988584 /* PurchasableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasableViewModel.swift; sourceTree = "<group>"; };
+		A9132535280B52DC00988584 /* StorageIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageIdentifier.swift; sourceTree = "<group>"; };
+		A9132537280B5AE500988584 /* AnalyticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsHelper.swift; sourceTree = "<group>"; };
+		A9132539280B5C4900988584 /* commandObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commandObject.swift; sourceTree = "<group>"; };
+		A913253B280B5C9E00988584 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		A913253D280EA43300988584 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A913253F280EA43C00988584 /* TruthOrDrink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TruthOrDrink.entitlements; sourceTree = "<group>"; };
 		A9168C6526403F0E000B6C22 /* networkRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkRequestHelper.swift; sourceTree = "<group>"; };
 		A9168C6726404098000B6C22 /* questionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionObject.swift; sourceTree = "<group>"; };
 		A9168C692640414D000B6C22 /* storageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storageHelper.swift; sourceTree = "<group>"; };
 		A9168C6B2641356C000B6C22 /* inAppPurchaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inAppPurchaseHelper.swift; sourceTree = "<group>"; };
-		A9168C6D2641371C000B6C22 /* purchasableProducts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = purchasableProducts.plist; sourceTree = "<group>"; };
+		A9168C6D2641371C000B6C22 /* IAP_ProductIDs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = IAP_ProductIDs.plist; sourceTree = "<group>"; };
 		A9492DD4263AE09700F08F87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9FCA4A52636DA6A00FDF425 /* TruthOrDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruthOrDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FCA4A82636DA6A00FDF425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5949268A33CDDF3E2FEA9B9 /* Pods_TruthOrDrink.framework in Frameworks */,
+				A913253E280EA43300988584 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,11 +126,78 @@
 		4489BD75057A2412A008F7CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A913253D280EA43300988584 /* StoreKit.framework */,
 				41BEDAC7CF9AEA3FFA36E968 /* Pods_TruthOrDrink.framework */,
 				8A3D9EFB8267F6D5D85BCE96 /* Pods_TruthOrDrink_TruthOrDrinkUITests.framework */,
 				ACD8D0DF09F809A1D986B186 /* Pods_TruthOrDrinkTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9132528280B50E100988584 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9FCA4AC2636DA6A00FDF425 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A9132529280B511700988584 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A9FCA4AE2636DA6A00FDF425 /* Main.storyboard */,
+				A9FCA4B32636DA6C00FDF425 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A913252A280B512D00988584 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A9168C6526403F0E000B6C22 /* networkRequestHelper.swift */,
+				A9168C6B2641356C000B6C22 /* inAppPurchaseHelper.swift */,
+				A9168C692640414D000B6C22 /* storageHelper.swift */,
+				A9132537280B5AE500988584 /* AnalyticsHelper.swift */,
+				A913253B280B5C9E00988584 /* IAPHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A913252B280B514400988584 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A9FCA4A82636DA6A00FDF425 /* AppDelegate.swift */,
+				A9FCA4AA2636DA6A00FDF425 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		A913252C280B516D00988584 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				A9168C6726404098000B6C22 /* questionObject.swift */,
+				A913252E280B51FF00988584 /* PurchasableData.swift */,
+				A9132530280B522F00988584 /* SettingsManageable.swift */,
+				A9132535280B52DC00988584 /* StorageIdentifier.swift */,
+				A9132539280B5C4900988584 /* commandObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		A913252D280B517500988584 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A9FCA4E12636E3E000FDF425 /* gameRules.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A9132532280B526E00988584 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9132533280B527C00988584 /* PurchasableViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A9FCA49C2636DA6A00FDF425 = {
@@ -140,20 +225,18 @@
 		A9FCA4A72636DA6A00FDF425 /* TruthOrDrink */ = {
 			isa = PBXGroup;
 			children = (
-				A9168C6D2641371C000B6C22 /* purchasableProducts.plist */,
-				A9FCA4A82636DA6A00FDF425 /* AppDelegate.swift */,
-				A9FCA4AA2636DA6A00FDF425 /* SceneDelegate.swift */,
-				A9FCA4AC2636DA6A00FDF425 /* ViewController.swift */,
-				A9FCA4AE2636DA6A00FDF425 /* Main.storyboard */,
+				A913253F280EA43C00988584 /* TruthOrDrink.entitlements */,
+				A9132532280B526E00988584 /* ViewModel */,
+				A913252D280B517500988584 /* Data */,
+				A913252C280B516D00988584 /* Objects */,
+				A913252B280B514400988584 /* Delegates */,
+				A913252A280B512D00988584 /* Helpers */,
+				A9132529280B511700988584 /* Storyboards */,
+				A9132528280B50E100988584 /* Controllers */,
+				A9168C6D2641371C000B6C22 /* IAP_ProductIDs.plist */,
 				A9FCA4B12636DA6C00FDF425 /* Assets.xcassets */,
-				A9FCA4B32636DA6C00FDF425 /* LaunchScreen.storyboard */,
 				A9FCA4B62636DA6C00FDF425 /* Info.plist */,
 				A9492DD4263AE09700F08F87 /* GoogleService-Info.plist */,
-				A9FCA4E12636E3E000FDF425 /* gameRules.swift */,
-				A9168C6526403F0E000B6C22 /* networkRequestHelper.swift */,
-				A9168C6726404098000B6C22 /* questionObject.swift */,
-				A9168C692640414D000B6C22 /* storageHelper.swift */,
-				A9168C6B2641356C000B6C22 /* inAppPurchaseHelper.swift */,
 			);
 			path = TruthOrDrink;
 			sourceTree = "<group>";
@@ -298,7 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9FCA4B52636DA6C00FDF425 /* LaunchScreen.storyboard in Resources */,
-				A9168C6E2641371C000B6C22 /* purchasableProducts.plist in Resources */,
+				A9168C6E2641371C000B6C22 /* IAP_ProductIDs.plist in Resources */,
 				A9492DD5263AE09700F08F87 /* GoogleService-Info.plist in Resources */,
 				A9FCA4B22636DA6C00FDF425 /* Assets.xcassets in Resources */,
 				A9FCA4B02636DA6A00FDF425 /* Main.storyboard in Resources */,
@@ -434,9 +517,16 @@
 				A9FCA4A92636DA6A00FDF425 /* AppDelegate.swift in Sources */,
 				A9168C6A2640414D000B6C22 /* storageHelper.swift in Sources */,
 				A9FCA4AB2636DA6A00FDF425 /* SceneDelegate.swift in Sources */,
+				A9132531280B522F00988584 /* SettingsManageable.swift in Sources */,
+				A9132536280B52DC00988584 /* StorageIdentifier.swift in Sources */,
+				A913252F280B51FF00988584 /* PurchasableData.swift in Sources */,
 				A9168C6826404098000B6C22 /* questionObject.swift in Sources */,
 				A9FCA4E22636E3E000FDF425 /* gameRules.swift in Sources */,
+				A913253A280B5C4900988584 /* commandObject.swift in Sources */,
 				A9168C6C2641356C000B6C22 /* inAppPurchaseHelper.swift in Sources */,
+				A9132534280B527C00988584 /* PurchasableViewModel.swift in Sources */,
+				A913253C280B5C9E00988584 /* IAPHelper.swift in Sources */,
+				A9132538280B5AE500988584 /* AnalyticsHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,15 +703,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TruthOrDrink/TruthOrDrink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 8B6DL7HNJ3;
 				INFOPLIST_FILE = TruthOrDrink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 10202;
 				PRODUCT_BUNDLE_IDENTIFIER = mennospijker.nl.TruthOrDrink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -635,15 +726,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TruthOrDrink/TruthOrDrink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 8B6DL7HNJ3;
 				INFOPLIST_FILE = TruthOrDrink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 10202;
 				PRODUCT_BUNDLE_IDENTIFIER = mennospijker.nl.TruthOrDrink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

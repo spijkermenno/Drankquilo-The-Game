@@ -1,6 +1,9 @@
 PODS:
   - Firebase/CoreOnly (7.9.0):
     - FirebaseCore (= 7.9.0)
+  - Firebase/Messaging (7.9.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 7.9.0)
   - Firebase/RemoteConfig (7.9.0):
     - Firebase/CoreOnly
     - FirebaseRemoteConfig (~> 7.9.0)
@@ -29,6 +32,18 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
     - PromisesObjC (~> 1.2)
+  - FirebaseInstanceID (7.11.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebaseMessaging (7.9.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstanceID (~> 7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Reachability (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
   - FirebaseRemoteConfig (7.9.0):
     - FirebaseABTesting (~> 7.0)
     - FirebaseCore (~> 7.0)
@@ -76,6 +91,7 @@ PODS:
   - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
+  - Firebase/Messaging
   - Firebase/RemoteConfig
   - FirebaseAnalytics
   - Google-Mobile-Ads-SDK
@@ -88,6 +104,8 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseInstallations
+    - FirebaseInstanceID
+    - FirebaseMessaging
     - FirebaseRemoteConfig
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
@@ -104,6 +122,8 @@ SPEC CHECKSUMS:
   FirebaseCore: 0798738ad1ae0fda67e17c7b9081241c431c6859
   FirebaseCoreDiagnostics: 3d36e05da74cb8b7ce30e6594a8f201b982c725c
   FirebaseInstallations: 5e777e6640fa060405cc7632447b6c5ca5af4742
+  FirebaseInstanceID: ad5135045a498d7775903efd39762d2cdfa1be27
+  FirebaseMessaging: 5f83f200a251c44f647f36cb43e557be09889e8d
   FirebaseRemoteConfig: ad9b7af6a1308d8dd26787b1702ce9e7d609d22e
   Google-Mobile-Ads-SDK: c14f5a63db1414b4ca0ee1539c9f3d700ace96c2
   GoogleAppMeasurement: 120eec8803fe65a4a7475fb3d3d59a61d0e1a866
@@ -113,6 +133,6 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: ad716b8b31058df1293ee5ee7e09ff714adf72d9
+PODFILE CHECKSUM: de3e371bb51ed8a1e10fa52f2ff9fb62edb2e992
 
 COCOAPODS: 1.11.3

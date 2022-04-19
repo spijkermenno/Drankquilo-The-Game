@@ -7,6 +7,7 @@ target 'TruthOrDrink' do
   pod 'FirebaseAnalytics'
   pod 'Firebase/RemoteConfig'
   pod 'Google-Mobile-Ads-SDK'
+  pod 'Firebase/Messaging'
 
   target 'TruthOrDrinkTests' do
     inherit! :search_paths
