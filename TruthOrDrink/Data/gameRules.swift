@@ -52,5 +52,6 @@ var commands: Array = [
     "De persoon recht tegenover jou geeft jou een zuigzoen.",
     "Trek een kledingstuk uit. (Schoenen en accessoires tellen niet natuurlijk)",
     "Trek een kledingstuk van de persoon rechts van je uit. (Schoenen en accessoires tellen niet natuurlijk)",
-    "Mix een extra dranksoort door je drankje."
+    "Mix een extra dranksoort door je drankje",
+    "Volg @tranquilo_the_game op instagram en tag ons in je verhaal"
 ]
