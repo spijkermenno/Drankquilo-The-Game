@@ -73,7 +73,7 @@
 		A9168C6B2641356C000B6C22 /* inAppPurchaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inAppPurchaseHelper.swift; sourceTree = "<group>"; };
 		A9168C6D2641371C000B6C22 /* IAP_ProductIDs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = IAP_ProductIDs.plist; sourceTree = "<group>"; };
 		A9492DD4263AE09700F08F87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A9FCA4A52636DA6A00FDF425 /* TruthOrDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruthOrDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9FCA4A52636DA6A00FDF425 /* Tranquilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tranquilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FCA4A82636DA6A00FDF425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9FCA4AA2636DA6A00FDF425 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A9FCA4AC2636DA6A00FDF425 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 		A9FCA4A62636DA6A00FDF425 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9FCA4A52636DA6A00FDF425 /* TruthOrDrink.app */,
+				A9FCA4A52636DA6A00FDF425 /* Tranquilo.app */,
 				A9FCA4BB2636DA6D00FDF425 /* TruthOrDrinkTests.xctest */,
 				A9FCA4C62636DA6D00FDF425 /* TruthOrDrinkUITests.xctest */,
 			);
@@ -275,9 +275,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9FCA4A42636DA6A00FDF425 /* TruthOrDrink */ = {
+		A9FCA4A42636DA6A00FDF425 /* Tranquilo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9FCA4CF2636DA6D00FDF425 /* Build configuration list for PBXNativeTarget "TruthOrDrink" */;
+			buildConfigurationList = A9FCA4CF2636DA6D00FDF425 /* Build configuration list for PBXNativeTarget "Tranquilo" */;
 			buildPhases = (
 				BE02F618891D3D2D5BA9BF41 /* [CP] Check Pods Manifest.lock */,
 				A9FCA4A12636DA6A00FDF425 /* Sources */,
@@ -289,9 +289,9 @@
 			);
 			dependencies = (
 			);
-			name = TruthOrDrink;
+			name = Tranquilo;
 			productName = TruthOrDrink;
-			productReference = A9FCA4A52636DA6A00FDF425 /* TruthOrDrink.app */;
+			productReference = A9FCA4A52636DA6A00FDF425 /* Tranquilo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A9FCA4BA2636DA6D00FDF425 /* TruthOrDrinkTests */ = {
@@ -368,7 +368,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9FCA4A42636DA6A00FDF425 /* TruthOrDrink */,
+				A9FCA4A42636DA6A00FDF425 /* Tranquilo */,
 				A9FCA4BA2636DA6D00FDF425 /* TruthOrDrinkTests */,
 				A9FCA4C52636DA6D00FDF425 /* TruthOrDrinkUITests */,
 			);
@@ -551,12 +551,12 @@
 /* Begin PBXTargetDependency section */
 		A9FCA4BD2636DA6D00FDF425 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A9FCA4A42636DA6A00FDF425 /* TruthOrDrink */;
+			target = A9FCA4A42636DA6A00FDF425 /* Tranquilo */;
 			targetProxy = A9FCA4BC2636DA6D00FDF425 /* PBXContainerItemProxy */;
 		};
 		A9FCA4C82636DA6D00FDF425 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A9FCA4A42636DA6A00FDF425 /* TruthOrDrink */;
+			target = A9FCA4A42636DA6A00FDF425 /* Tranquilo */;
 			targetProxy = A9FCA4C72636DA6D00FDF425 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -705,14 +705,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TruthOrDrink/TruthOrDrink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 8B6DL7HNJ3;
 				INFOPLIST_FILE = TruthOrDrink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 10202;
+				MARKETING_VERSION = 10203;
 				PRODUCT_BUNDLE_IDENTIFIER = mennospijker.nl.TruthOrDrink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -728,14 +728,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TruthOrDrink/TruthOrDrink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 8B6DL7HNJ3;
 				INFOPLIST_FILE = TruthOrDrink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 10202;
+				MARKETING_VERSION = 10203;
 				PRODUCT_BUNDLE_IDENTIFIER = mennospijker.nl.TruthOrDrink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -843,7 +843,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9FCA4CF2636DA6D00FDF425 /* Build configuration list for PBXNativeTarget "TruthOrDrink" */ = {
+		A9FCA4CF2636DA6D00FDF425 /* Build configuration list for PBXNativeTarget "Tranquilo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9FCA4D02636DA6D00FDF425 /* Debug */,

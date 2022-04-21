@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9FCA4A42636DA6A00FDF425"
-               BuildableName = "TruthOrDrink.app"
-               BlueprintName = "TruthOrDrink"
+               BuildableName = "Tranquilo.app"
+               BlueprintName = "Tranquilo"
                ReferencedContainer = "container:TruthOrDrink.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9FCA4A42636DA6A00FDF425"
-            BuildableName = "TruthOrDrink.app"
-            BlueprintName = "TruthOrDrink"
+            BuildableName = "Tranquilo.app"
+            BlueprintName = "Tranquilo"
             ReferencedContainer = "container:TruthOrDrink.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -88,8 +88,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9FCA4A42636DA6A00FDF425"
-            BuildableName = "TruthOrDrink.app"
-            BlueprintName = "TruthOrDrink"
+            BuildableName = "Tranquilo.app"
+            BlueprintName = "Tranquilo"
             ReferencedContainer = "container:TruthOrDrink.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

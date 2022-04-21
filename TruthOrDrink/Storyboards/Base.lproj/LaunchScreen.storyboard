@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_7" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,20 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wordart" translatesAutoresizingMaskIntoConstraints="NO" id="Q5c-XP-58v">
-                                <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smiletear" translatesAutoresizingMaskIntoConstraints="NO" id="2je-pG-9bk">
+                                <rect key="frame" x="343" y="150" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                        <constraints>
-                            <constraint firstItem="Q5c-XP-58v" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3p7-eN-aPQ"/>
-                            <constraint firstAttribute="bottom" secondItem="Q5c-XP-58v" secondAttribute="bottom" id="IcF-dj-ybO"/>
-                            <constraint firstItem="Q5c-XP-58v" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="X1J-lJ-5le"/>
-                            <constraint firstItem="Q5c-XP-58v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eDl-r0-IxJ"/>
-                            <constraint firstAttribute="trailing" secondItem="Q5c-XP-58v" secondAttribute="trailing" id="i4V-JS-GCE"/>
-                            <constraint firstItem="Q5c-XP-58v" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="iFQ-qy-gfa"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.66274509803921566" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,9 +31,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wordart" width="1797" height="605"/>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="smiletear" width="53.333332061767578" height="53.333332061767578"/>
     </resources>
 </document>
